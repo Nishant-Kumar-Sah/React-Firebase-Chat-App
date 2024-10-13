@@ -1,4 +1,28 @@
+/* Custom scrollbars for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Track is the empty space behind the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners for a sleeker look */
+  border: 2px solid transparent; /* Optional: Adds spacing around the scrollbar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: darkgray; /* Changes color when hovering for effect */
+}
+
+
 .chatList {
+        flex: 1;
+        overflow-y: scroll; /* Enables vertical scrolling */
+        overflow-x: hidden;
+
         .search {
                 display: flex;
                 align-items: center;
@@ -37,6 +61,36 @@
                         padding: 10px;
                         border-radius: 10px;
                         cursor:pointer;
+                }
+        }
+
+        .item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+                cursor: pointer;
+                border-bottom: 1px solid #dddddd35;
+
+                img {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+                }
+                .texts{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;   
+                }
+                span{
+                        font-weight: 500;
+                }
+                p{
+                        font-size: 14px;
+                        font-weight: 300;
+
                 }
         }
 }
