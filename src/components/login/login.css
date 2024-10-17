@@ -13,7 +13,7 @@
     align-items: center;
     gap:20px;
     
-    .item{
+    
         form{
             display :flex;
             flex-direction:column;
@@ -58,11 +58,12 @@
                 font-weight:500;
             }
         }
-    }
+    
 
-    .operator{
-        height: 80%;
-        width:2px;
-        background-color:#dddddd35
-    }
+    
+}
+.seperator{
+    height: 80%;
+    width:2px;
+    background-color:#dddddd35
 }
