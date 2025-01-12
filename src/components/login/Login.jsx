@@ -1,10 +1,18 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import "./login.css"
 const Login = () => {
   const [avatar, setAvator] = useState({
     file:null,
     url:""
   })
+  const handleAvatar = e =>{
+    if(e.target.files[0]){
+      setAvator({
+        file:e.target.files[0],
+        url: URL.createObjectURL(e.target.files[0])
+      })
+    }
+  }
   return (
     <div className='login'>
       <div className="item">
@@ -19,7 +27,9 @@ const Login = () => {
       <div className="item">
         <h2>Create an Account</h2>
         <form>
-          <label htmlFor="file">Upload An image</label>
+          <label htmlFor="file">
+            <img src={avatar.url || "./avatar.png"} alt=""/>
+            Upload an image</label>
           <input 
             type="file" 
             id='file' 
