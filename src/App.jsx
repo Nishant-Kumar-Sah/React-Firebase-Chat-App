@@ -4,7 +4,7 @@ import Detail from './components/detail/Detail'
 import List from './components/list/List'
 import './App.css'
 import Login from './components/login/Login'
-import Notification from './components/Notification'
+import Notification from './components/notification/Notification'
 
 const App = () => {
   const user = true;
