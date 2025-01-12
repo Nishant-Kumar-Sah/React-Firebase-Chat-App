@@ -4,9 +4,10 @@ import Detail from './components/detail/Detail'
 import List from './components/list/List'
 import './App.css'
 import Login from './components/login/Login'
+import Notification from './components/Notification'
 
 const App = () => {
-  const user = false;
+  const user = true;
   return (
     <div className="container">
       {user ? (
@@ -20,6 +21,7 @@ const App = () => {
       <Login/>
 
       )}
+      <Notification/>
     </div>
   )
 }
